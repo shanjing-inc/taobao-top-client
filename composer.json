@@ -1,19 +1,19 @@
 {
-    "name": "orzcc/taobao-top-client",
+    "name": "shanjing/taobao-top-client",
     "type": "library",
-    "description": "Taobao top client(SDK) for laravel",
-    "keywords": ["taobao", "laravel", "sdk", "api"],
-    "homepage": "https://github.com/orzcc/taobao-top-client",
+    "description": "Taobao Top Client(SDK) for Laravel",
+    "keywords": ["Taobao", "Laravel", "Sdk", "Api"],
+    "homepage": "https://github.com/shanjing-inc/taobao-top-client",
     "license": "MIT",
     "authors": [
         {
-            "name": "orzcc",
-            "email": "orzcczh@gmail.com"
+            "name": "shanjing",
+            "email": "github@shanjing-inc.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "~5.0|~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|^6.0|^7.0",
+        "illuminate/support": "~5.0|~5.1|~5.2|~5.3|~5.4|~5.5|~5.6|^6.0|^7.0|^8.0",
         "graham-campbell/manager": "^2.0|^3.0|^4.0"
     },
     "autoload": {
