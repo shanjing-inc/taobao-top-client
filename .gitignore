@@ -3,3 +3,5 @@ composer.phar
 composer.lock
 test.php
 .idea/
+.history
+.php-cs-fixer.cache
