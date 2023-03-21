@@ -1,64 +1,70 @@
 <?php
+
+namespace TopClient\request;
+
+use TopClient\RequestCheckUtil;
+
+
 /**
  * TOP API: alibaba.alsc.union.kb.item.promotion.share.create request
- * 
+ *
  * @author auto create
  * @since 1.0, 2023.02.16
  */
 class AlibabaAlscUnionKbItemPromotionShareCreateRequest
 {
-	/** 
+	/**
 	 * 业务单元，1-CPA，2-CPS，3-SPU。默认1-CPA
 	 **/
 	private $bizUnit;
-	
-	/** 
+
+	/**
 	 * 是否合成支付宝推广图
 	 **/
 	private $includeAlipayImgUrl;
-	
-	/** 
+
+	/**
 	 * 是否返回吱口令
 	 **/
 	private $includeAlipayWathword;
-	
-	/** 
+
+	/**
 	 * 废弃
 	 **/
 	private $includeImgUrl;
-	
-	/** 
+
+	/**
 	 * 废弃
 	 **/
 	private $includeMiniQrCode;
-	
-	/** 
+
+	/**
 	 * 废弃
 	 **/
 	private $includeMiniQrCodeHyaline;
-	
-	/** 
+
+	/**
 	 * 是否合成微信推广图
 	 **/
 	private $includeWxImgUrl;
-	
-	/** 
+
+	/**
 	 * 商品ID，默认CPA的品，如果推广其他业务单元的品，请填写对应的biz_unit
 	 **/
 	private $itemId;
-	
-	/** 
+
+	/**
 	 * 推广位pid
 	 **/
 	private $pid;
-	
-	/** 
+
+	/**
 	 * 第三方会员id扩展
 	 **/
 	private $sid;
-	
+
 	private $apiParas = array();
-	
+
 	public function setBizUnit($bizUnit)
 	{
 		$this->bizUnit = $bizUnit;
@@ -173,19 +179,19 @@ class AlibabaAlscUnionKbItemPromotionShareCreateRequest
 	{
 		return "alibaba.alsc.union.kb.item.promotion.share.create";
 	}
-	
+
 	public function getApiParas()
 	{
 		return $this->apiParas;
 	}
-	
+
 	public function check()
 	{
-		
+
 		RequestCheckUtil::checkNotNull($this->itemId,"itemId");
 		RequestCheckUtil::checkNotNull($this->pid,"pid");
 	}
-	
+
 	public function putOtherTextParam($key, $value) {
 		$this->apiParas[$key] = $value;
 		$this->$key = $value;

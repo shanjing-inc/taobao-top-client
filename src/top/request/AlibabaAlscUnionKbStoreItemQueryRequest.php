@@ -1,34 +1,39 @@
 <?php
+
+namespace TopClient\request;
+
+use TopClient\RequestCheckUtil;
+
 /**
  * TOP API: alibaba.alsc.union.kb.store.item.query request
- * 
+ *
  * @author auto create
  * @since 1.0, 2022.07.27
  */
 class AlibabaAlscUnionKbStoreItemQueryRequest
 {
-	/** 
+	/**
 	 * 场景类型（"kb_natural";）
 	 **/
 	private $bizType;
-	
-	/** 
+
+	/**
 	 * 推广位
 	 **/
 	private $pid;
-	
-	/** 
+
+	/**
 	 * sid
 	 **/
 	private $sid;
-	
-	/** 
+
+	/**
 	 * 门店ID
 	 **/
 	private $storeId;
-	
+
 	private $apiParas = array();
-	
+
 	public function setBizType($bizType)
 	{
 		$this->bizType = $bizType;
@@ -77,20 +82,20 @@ class AlibabaAlscUnionKbStoreItemQueryRequest
 	{
 		return "alibaba.alsc.union.kb.store.item.query";
 	}
-	
+
 	public function getApiParas()
 	{
 		return $this->apiParas;
 	}
-	
+
 	public function check()
 	{
-		
+
 		RequestCheckUtil::checkNotNull($this->bizType,"bizType");
 		RequestCheckUtil::checkNotNull($this->pid,"pid");
 		RequestCheckUtil::checkNotNull($this->storeId,"storeId");
 	}
-	
+
 	public function putOtherTextParam($key, $value) {
 		$this->apiParas[$key] = $value;
 		$this->$key = $value;
