@@ -1,11 +1,13 @@
 <?php
+namespace TopClient\request;
+
+use TopClient\RequestCheckUtil;
 /**
  * TOP API: taobao.tbk.item.info.upgrade.get request
  * 
  * @author auto create
  * @since 1.0, 2023.12.27
  */
-use TopClient\RequestCheckUtil;
 class TbkItemInfoUpgradeGetRequest
 {
 	/** 

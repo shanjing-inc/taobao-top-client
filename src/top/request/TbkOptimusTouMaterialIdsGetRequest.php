@@ -1,11 +1,13 @@
 <?php
+namespace TopClient\request;
+
+use TopClient\RequestCheckUtil;
 /**
  * TOP API: taobao.tbk.optimus.tou.material.ids.get request
  * 
  * @author auto create
  * @since 1.0, 2022.09.29
  */
-use TopClient\RequestCheckUtil;
 class TbkOptimusTouMaterialIdsGetRequest
 {
 	/** 
