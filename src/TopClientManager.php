@@ -15,12 +15,27 @@ class TopClientManager extends AbstractManager
         $this->factory = $factory;
     }
     
-    protected function createConnection(array $config)
+
+    /**
+     * Create the connection instance.
+     *
+     * @param array $config
+     *
+     * @throws \InvalidArgumentException
+     *
+     * @return object
+     */
+    protected function createConnection(array $config): object
     {
         return $this->factory->make($config);
     }
   
-    protected function getConfigName()
+    /**
+     * Get the configuration name.
+     *
+     * @return string
+     */
+    protected function getConfigName(): string
     {
         return 'taobaotop';
     }
